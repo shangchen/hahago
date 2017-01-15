@@ -30,17 +30,21 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-
+  gem 'bcrypt' 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 #use bootstrap
 gem 'bootstrap-sass'
+
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'sqlite3'
+  gem 'faker'
 end
 
 group :development do
@@ -53,7 +57,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
 	gem 'pg'
-  gem 'bcrypt' 
   gem 'puma', '~> 3.0' 
 end
 
