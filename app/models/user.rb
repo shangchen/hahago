@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_many :microposts, dependent: :destroy
 	attr_accessor :remember_token, :activation_token
 	before_save   :downcase_email
 	before_create :create_activation_digest
@@ -43,6 +44,9 @@ class User < ApplicationRecord
 		BCrypt::Password.new(digest).is_password?(token)
 	end
 
+	def feed
+	  microposts
+	end
   # 激活账户
   def activate
     update_attribute(:activated,    true)
