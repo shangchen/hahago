@@ -1,7 +1,18 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<nav class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to "HaHaGo", root_path, id: "logo" %>
-    <nav>
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+          data-target="#example-navbar-collapse">
+      <span class="sr-only">切换导航</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      </div>
+
+     <div class="collapse navbar-collapse" id="example-navbar-collapse">
+
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home",   root_path %></li>
         <li><%= link_to "Help",   help_path %></li>
@@ -24,6 +35,6 @@
           <li><%= link_to "Log in", login_path %></li>
         <% end %>
       </ul>
-    </nav>
+      </div>
   </div>
-</header>
+</nav>

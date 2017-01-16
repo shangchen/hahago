@@ -57,4 +57,19 @@ module SessionsHelper
 		user == current_user
 	end
 
+	def get_sentence()
+		url='http://www.dailyenglishquote.com/?variant=zh-hans'
+		begin
+			re1=Net::HTTP.get_response(URI(url))
+			re=re1.read_body
+		rescue
+		  error_info='have a good day~ !'
+		  return error_info
+		end
+			re=~/<div class="separator" .*/
+			re1= $'.to_s 
+			re1=~ /<!-- AddThis Sharing Buttons below -->/
+			re2 = $`.to_s		
+	end
+
 end

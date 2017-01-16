@@ -1,4 +1,19 @@
+
 <% provide(:title,"Home") %>
+<div class="center jumbotron">
+<% if !logged_in? %>
+  <h1 class="hahafont">Welcome to the HaHaGo</h1>
+
+  <h2>
+    This is the home page for the HaHaGo. HaHaGo is developing, and will be more fun and useful >^_^<
+  </h2>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <hr>
+<% end %>
+  <p class="hahafont text-left">Daily sentence:</p>
+    <%= raw(@dailySentence) %>  
+    
+</div>
 <% if logged_in? %>
   <div class="row">
     <aside class="col-md-4">
@@ -10,18 +25,8 @@
       </section>
     </aside>
      <div class="col-md-8">
-      <h3>Micropost Feed</h3>
+      <h3>Microposts</h3>
       <%= render 'shared/feed' %>
     </div>   
   </div>
-<% else %>
-<div class="center jumbotron">
-  <h1 class="hahafont">Welcome to the HaHaGo</h1>
-
-  <h2>
-    This is the home page for the HaHaGo. HaHaGo is developing, and will be more fun and useful >^_^<
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
 <% end %>
