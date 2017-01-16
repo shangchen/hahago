@@ -58,6 +58,7 @@ module SessionsHelper
 	end
 
 	def get_sentence()
+		puts '--------------------------------'
 		url='http://www.dailyenglishquote.com/?variant=zh-hans'
 		begin
 			re1=Net::HTTP.get_response(URI(url))

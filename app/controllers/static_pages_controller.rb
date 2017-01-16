@@ -2,9 +2,10 @@ class StaticPagesController < ApplicationController
   @@dailySentence=nil
   @@now_day=nil
   def home
-    if !@@dailySentence||@@now_day!=Time.now.day
+    if @@dailySentence&&@@now_day==Time.now.day
+    else
       @@dailySentence = get_sentence.force_encoding("UTF-8")
-      @@now_day=Time.now.day
+      @@now_day=Time.now.day      
     end
     @dailySentence=@@dailySentence
     
