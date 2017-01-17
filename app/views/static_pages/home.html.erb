@@ -1,17 +1,20 @@
 
 <% provide(:title,"Home") %>
 <div class="center jumbotron">
+
+  <p class="hahafont text-left">Daily sentence:</p>
+    <%= raw(@dailySentence) %> 
+
 <% if !logged_in? %>
+  <hr>
   <p class="hahafont">Welcome to the HaHaGo</p>
 
   <h2>
     This is the home page for the HaHaGo. HaHaGo is developing, and will be more fun and useful.   >^_^<
   </h2>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  <hr>
+  <%= link_to "Log in", login_path, class: "btn btn-lg btn-primary" %>
 <% end %>
-  <p class="hahafont text-left">Daily sentence:</p>
-    <%= raw(@dailySentence) %>  
+ 
     
 </div>
 <% if logged_in? %>
