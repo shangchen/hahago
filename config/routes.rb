@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get '/home', to: 'static_pages#home'
   get '/about', to: 'static_pages#about'
   get '/info', to: 'static_pages#info'
-  get '/contact', to: 'static_pages#contact'
+  get '/vr_ar', to: 'static_pages#vr_ar'
+  get '/ai', to: 'static_pages#ai'
+  get '/fun', to: 'static_pages#fun'
 
   get '/signup', to: 'users#new'
 
