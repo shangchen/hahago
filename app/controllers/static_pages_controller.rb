@@ -25,11 +25,11 @@ class StaticPagesController < ApplicationController
   @@infoNews=nil
   @@now_hour=nil
   def info
-    # if @@infoNews&&@@now_hour==Time.now.hour
-    # else
+    if @@infoNews&&@@now_hour==Time.now.hour
+    else
       @@infoNews = get_infoq().force_encoding("UTF-8")
       @@now_hour=Time.now.hour      
-    # end
+    end
     @infoNews=@@infoNews    
   end
 
