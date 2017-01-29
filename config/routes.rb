@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/info', to: 'static_pages#info'
   get '/vr_ar', to: 'static_pages#vr_ar'
   get '/ai', to: 'static_pages#ai'
-  get '/fun', to: 'static_pages#fun'
+  get '/sec', to: 'static_pages#security'
 
   get '/signup', to: 'users#new'
 

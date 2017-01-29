@@ -63,18 +63,18 @@ class StaticPagesController < ApplicationController
       @AI=@@AI
   end
 
-  @@fun=nil
-  @@day_getFun=nil
-  def fun
-    url = 'http://chuansong.me/account/lengtoo'
-    re_first = '<div class="main_col col w4_5">'
-    re_second = '<div id="li"'
-    # if @@fun&&@@day_getFun==Time.now.day
-    # else
-      @@fun = get_sentence(url,re_first,re_second).force_encoding("UTF-8")
-      @@fun.gsub!('<div class="img">','<div class="img" style="display:none">')  
-      @@day_getFun=Time.now.day 
-    # end
-      @fun=@@fun
+  @@sec=nil
+  @@day_getSec=nil
+  def security
+    url = 'http://www.leiphone.com/category/letshome'
+    re_first = '<div class="list">'
+    re_second = '<div class="lph-page">'
+    if @@sec&&@@day_getSec==Time.now.day
+    else
+      @@sec = get_sentence(url,re_first,re_second).force_encoding("UTF-8")
+      @@sec.gsub!('<div class="img">','<div class="img" style="display:none">')  
+      @@day_getSec=Time.now.day 
+    end
+      @sec=@@sec
   end
 end
