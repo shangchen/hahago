@@ -21,7 +21,6 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-		  log_in @user
 		  @user.send_activation_email
 	      flash[:info] = "Welcome to the HaHaGo!
 	      Please check your email to activate your account."
