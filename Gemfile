@@ -62,6 +62,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
 	gem 'pg'
   gem 'puma', '~> 3.0' 
+  gem 'sendgrid-ruby'
 end
 
 group :test do
