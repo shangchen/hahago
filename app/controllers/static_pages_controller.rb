@@ -3,8 +3,8 @@ class StaticPagesController < ApplicationController
   @@now_day=nil
   def home
     url = 'http://www.dailyenglishquote.com/?variant=zh-hans'
-    re_first = '<div class="separator" .*'
-    re_second = '<!-- AddThis Sharing Buttons below -->'
+    re_first = '<div class="entry cf">'
+    re_second = '<!-- END entry -->'
 
     if @@dailySentence&&@@now_day==Time.now.day
     else

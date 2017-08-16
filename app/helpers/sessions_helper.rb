@@ -68,7 +68,7 @@ module SessionsHelper
 			re=~/#{re_first}/
 			re1= $'.to_s 
 			re1=~ /#{re_second}/
-			re2 = $`.to_s	
+			re2 = '<div>'+$`.to_s	
 		end
 
 	def get_infoq()
