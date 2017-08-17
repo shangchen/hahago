@@ -86,7 +86,9 @@ module SessionsHelper
 	    re2= $'.to_s
 	    re2=~ /<!--	#######		load more news	#########	 -->/
 	    re3 =  $`.to_s.gsub!(/<div class="news_type/,'<hr><div class="news_type')
-	    re4=re3.gsub!(/href="\/cn/,'target="_blank" href="http://www.infoq.com/cn') 
+	    re4=re3.gsub!(/href="\/cn/,'target="_blank" href="http://www.infoq.com/cn')	    
+	    #re5=re4.gsub!(/class="followers" style="display: inline;"/,'class="followers" style="display: none;"')  
+		re5=re4.gsub!(/<span>/,'<span style="display: none;">')  
 	end
 
 end
