@@ -72,7 +72,7 @@ module SessionsHelper
 		end
 
 	def get_infoq()
-	    return 'sorry,server not response'
+	    return 'Sorry, no response from server'
 		url='http://www.infoq.com/cn/news'
 	    begin
 			re1=Net::HTTP.get_response(URI(url))
