@@ -72,13 +72,12 @@ module SessionsHelper
 		end
 
 	def get_infoq()
-	    return 'Sorry, no response from server'
-		url='http://www.infoq.com/cn/news'
+		url='https://www.infoq.com/news/'
 	    begin
 			re1=Net::HTTP.get_response(URI(url))
 			re=re1.read_body
 	    rescue
-	      error_info='sorry,server not response'
+	      error_info='Sorry, no response from server'
 	      return error_info
 	    end
 	    re=~/<!--	#######		HEADER END	#########	 -->/
@@ -86,8 +85,8 @@ module SessionsHelper
 	    re1=~/<div class="clear"><\/div>/
 	    re2= $'.to_s
 	    re2=~ /<!--	#######		load more news	#########	 -->/
-	    re3 =  $`.to_s.gsub!(/<div class="news_type/,'<hr><div class="news_type')
-	    re4=re3.gsub!(/href="\/cn/,'target="_blank" href="http://www.infoq.com/cn')	    
+	    re3 =  $`.to_s.gsub!(/<div class="news_type_block/,'<hr><div class="news_type_block')
+	    re4=re3.gsub!(/href="\/news/,'target="_blank" href="https://www.infoq.com/news')	    
 	    #re5=re4.gsub!(/class="followers" style="display: inline;"/,'class="followers" style="display: none;"')  
 		re5=re4.gsub!(/<span>/,'<span style="display: none;">')  
 	end
