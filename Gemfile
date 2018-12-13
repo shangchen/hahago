@@ -41,7 +41,7 @@ gem 'bootstrap-will_paginate'
 
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'fog'
+gem 'fog', '= 2.0.0'
 
 
 group :development, :test do
