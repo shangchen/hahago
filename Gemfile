@@ -13,34 +13,34 @@ gem 'rails', '= 5.0.7'
 # Use Puma as the app server
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '= 5.0.7'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '= 4.1.19'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '= 4.2.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '= 4.3.3'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbolinks', '= 5.2.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '= 2.8.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-  gem 'bcrypt' 
+  gem 'bcrypt', '= 3.1.12' 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 #use bootstrap
 gem 'bootstrap-sass','= 3.3.7'
 
-gem 'will_paginate'
-gem 'bootstrap-will_paginate'
+gem 'will_paginate', '= 3.1.6'
+gem 'bootstrap-will_paginate', '= 1.0.0'
 
-gem 'carrierwave'
-gem 'mini_magick'
+gem 'carrierwave', '= 1.2.3'
+gem 'mini_magick', '= 4.9.2'
 #gem 'fog', '= 1.42.1'
 
 
@@ -60,9 +60,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
-	gem 'pg'
-  gem 'puma', '~> 3.0' 
-  gem 'sendgrid-ruby'
+	gem 'pg', '= 1.1.3'
+  gem 'puma', '= 3.12.0' 
+  gem 'sendgrid-ruby', '= 5.3.0'
 end
 
 group :test do
