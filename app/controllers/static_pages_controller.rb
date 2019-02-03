@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
 
     if @@dailySentence&&@@now_day==Time.now.day
     else
-      @@dailySentence = get_sentence(url,re_first,re_second).force_encoding("UTF-8")
+      @@dailySentence = (get_sentence(url,re_first,re_second)+"</div>").force_encoding("UTF-8")
       @@now_day=Time.now.day      
     end
     @dailySentence=@@dailySentence
